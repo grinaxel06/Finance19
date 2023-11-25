@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:backgroundTint="#181818">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardwitharrow"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_vertical|left"
+            app:cardCornerRadius="8dp">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/arrow_up"
+                android:layout_gravity="center"
+                android:id="@+id/arrow_card">
+
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="196dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="15dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:text="Зарплата"
+            android:textColor="@color/white"
+            android:textSize="20sp"></TextView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="01.01.2001 00:00"
+            android:textSize="15sp"
+            android:id="@+id/date"
+            android:textColor="@color/textt"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="60dp"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/money"
+            android:layout_width="155dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:gravity="end"
+
+            android:text="+1000Р"
+            android:textColor="@color/green"
+            android:textSize="18dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="350dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center"
+    android:layout_height="200dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/regular_or_single"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:backgroundTint="#181818"
+        app:cardCornerRadius="20dp"
+        app:cornerRadius="200dp"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/regular_btt"
+            android:layout_width="160dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="85dp"
+            android:backgroundTint="#242424"
+            android:text="Регулярная"
+            android:textColor="@color/textt"
+            app:cornerRadius="20dp">
+
+        </com.google.android.material.button.MaterialButton>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/single_btt"
+            android:layout_width="160dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="85dp"
+            android:backgroundTint="#242424"
+            android:text="Единичная"
+            android:textColor="@color/textt"
+            app:cornerRadius="20dp">
+
+
+        </com.google.android.material.button.MaterialButton>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
