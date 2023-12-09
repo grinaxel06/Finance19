@@ -11,8 +11,11 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.material.button.MaterialButton;
+
+import org.eazegraph.lib.charts.PieChart;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,8 +31,12 @@ public class MainActivity extends AppCompatActivity {
     private final static List<Item> items = new ArrayList<>();
 
     MaterialButton show;
+    int profit=0;
+    int expenses=0;
+    TextView score;
     MaterialButton show1;
     Dialog regular_or_single;
+    PieChart pieChart;
 
     @SuppressLint({"WrongViewCast", "NotifyDataSetChanged"})
     @Override
@@ -42,15 +49,26 @@ public class MainActivity extends AppCompatActivity {
             }
         }
 
+
+
+        pieChart= (PieChart)findViewById(R.id.piechart);
+        addDataSet(pieChart);
+
+
+
         RecyclerView.Adapter<RecyclerView.ViewHolder> adapter = new MyAdapter(items);
         RecyclerView recyclerView = findViewById(R.id.recycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(adapter);
 
         adapter.notifyDataSetChanged();
-
+        score = findViewById(R.id.all_money);
         show = findViewById(R.id.plus_button);
         show1 = findViewById(R.id.minus_button);
+
+        score.setText(AllMoneyScore());
+
+
         regular_or_single = new Dialog(MainActivity.this);
         show.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -72,6 +90,16 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void addDataSet(PieChart pieChart) {
+
+    }
+    private int AllMoneyScore(List<Operation> OperList){
+        for (Operation op : OperList) {
+
+        }
+        return profit-expenses;
     }
 
 

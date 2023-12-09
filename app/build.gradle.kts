@@ -55,13 +55,14 @@ android {
         }
     }
 
+
+
 }
 
 dependencies {
     implementation ("androidx.room:room-runtime:2.6.0")
     annotationProcessor ("androidx.room:room-compiler:2.6.0")
     implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
-
     implementation ("androidx.cardview:cardview:1.0.0")
     implementation ("com.github.blackfizz:eazegraph:1.2.5l@aar")
     implementation ("com.nineoldandroids:library:2.4.0")
